@@ -1,0 +1,9 @@
+<div>
+    <i class="iconfont" [ngClass]="icon"></i>
+    <div>
+        <h3>{{name}}</h3>
+        <span>{{description}}</span>
+    </div>
+    <i class="iconfont"
+        [ngClass]="{'icon-qrcode': type=='qrcode', 'icon-website': type=='website','icon-download': type=='resource'}"></i>
+</div>

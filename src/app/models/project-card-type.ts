@@ -1,0 +1,1 @@
+export declare type ProjectCardType = 'resource' | 'website' | 'qrcode'; // 下载链接 | 网页地址 | 二维码
