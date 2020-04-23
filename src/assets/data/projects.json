@@ -4,20 +4,20 @@
         "descrption": "",
         "icon": "icon-website",
         "type": "website",
-        "url": "https://officebeta.coeusbox.com/"
+        "url": "https://office.coeusbox.com/"
     },
     {
         "name": "收银台windows版",
         "descrption": "",
         "icon": "icon-windows",
         "type": "resource",
-        "url": ""
+        "url": "https://coeus.oss-cn-qingdao.aliyuncs.com/pos_release/COEUS-POS%20Setup%202.8.13.exe"
     },
     {
         "name": "移动报表",
         "descrption": "",
         "icon": "icon-mobile-phone",
         "type": "qrcode",
-        "url": "/assets/images/mobile-report-beta.png"
+        "url": "/assets/images/mobile-report-prod.png"
     }
 ]
