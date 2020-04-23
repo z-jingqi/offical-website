@@ -1,0 +1,23 @@
+[
+    {
+        "name": "门店管理后台",
+        "descrption": "",
+        "icon": "icon-website",
+        "type": "website",
+        "url": "https://officebeta.coeusbox.com/"
+    },
+    {
+        "name": "收银台windows版",
+        "descrption": "",
+        "icon": "icon-windows",
+        "type": "resource",
+        "url": ""
+    },
+    {
+        "name": "移动报表",
+        "descrption": "",
+        "icon": "icon-mobile-phone",
+        "type": "qrcode",
+        "url": "/assets/images/mobile-report-beta.png"
+    }
+]

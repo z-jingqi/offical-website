@@ -4,8 +4,14 @@
     <span class="logo-txt">Coeus</span>
   </div>
 </header>
+<div class="background"></div>
 <section>
-
+  <div class="projects-container">
+    <div class="project" *ngFor="let item of (projects$ | async)">
+      <coeus-project-card [project]="item">
+      </coeus-project-card>
+    </div>
+  </div>
 </section>
 <footer>
 

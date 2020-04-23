@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ProjectCardType } from '../models';
+import { ProjectCardType, Project } from '../models';
 
 @Component({
   selector: 'coeus-project-card',
@@ -8,15 +8,20 @@ import { ProjectCardType } from '../models';
 })
 export class ProjectCardComponent implements OnInit {
 
-  @Input() name = '';
-  @Input() description = '';
-  @Input() type: ProjectCardType = 'resource';
-  @Input() icon = '';
+  @Input() project: Project = {} as Project;
 
   constructor() { }
 
   ngOnInit(): void {
 
+  }
+
+  clickEvent(event: MouseEvent) {
+    event.stopPropagation();
+    if (this.project.type == 'qrcode') {
+      return;
+    }
+    window.open(this.project.url, "_blank");
   }
 
 }
