@@ -7,6 +7,8 @@
     text-align: center;
     width: 250px;
     position: relative;
+    box-sizing: border-box;
+    height: 100%;
 
     &:hover {
         box-shadow: 0px 0px 5px #ff860d;
@@ -38,8 +40,17 @@
     font-size: 20px;
 }
 
+.txt-area {
+    flex: 1;
+}
+
 .name {
     margin: 0;
+}
+
+.desc {
+    color: #aaa;
+    font-size: 14px;
 }
 
 .qrcode-container {

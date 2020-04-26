@@ -35,11 +35,30 @@ header {
     left: 50%;
     transform: translateX(-50%);
     display: grid;
+    column-gap: 20px;
+    row-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 60px);
+    align-items: center;
 }
 
 .project {
     background: #fff;
     border-radius: 5px;
-    margin-right: 20px;
+    height: 100%;
+}
+
+.keep-on-record {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 14px;
+    transition-duration: .2s;
+    text-decoration: none;
+
+    &:hover {
+        color: #ff860d;
+    }
 }
