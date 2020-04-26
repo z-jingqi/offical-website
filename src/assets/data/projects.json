@@ -26,5 +26,12 @@
         "icon": "icon-mobile-phone",
         "type": "qrcode",
         "url": "/assets/images/mobile-report-prod.png"
+    },
+    {
+        "name": "培训资料",
+        "descrption": "门店管理系统培训资料",
+        "icon": "icon-folder",
+        "type": "website",
+        "url": "https://share.weiyun.com/566SB00"
     }
 ]
