@@ -14,7 +14,7 @@ export interface Project {
      */
     icon?: string;
     /**
-     * 项目的类型 网页地址 ｜ 下载资源 ｜ 二维码
+     * 项目的类型：网页地址 ｜ 下载资源 ｜ 二维码
      */
     type: ProjectCardType;
     /**
