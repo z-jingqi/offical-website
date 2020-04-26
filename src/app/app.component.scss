@@ -31,14 +31,14 @@ header {
 
 .projects-container {
     position: absolute;
-    top: 35%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     display: grid;
     column-gap: 20px;
     row-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 60px);
+    grid-auto-rows: 60px;
     align-items: center;
 }
 
