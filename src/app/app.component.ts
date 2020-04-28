@@ -23,4 +23,8 @@ export class AppComponent implements OnInit {
   getProjects() {
     this.projects$ = this.dataService.getProjectData();
   }
+
+  videoLoaded(event: Event) {
+    (event.target as HTMLVideoElement).play();
+  }
 }

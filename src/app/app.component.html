@@ -5,7 +5,9 @@
   </div>
 </header>
 <div class="background">
-  <video muted src="assets/videos/bg.mp4" loop="loop" autoplay="autoplay"></video>
+  <video muted loop="loop" autoplay="autoplay" poster="assets/images/bg4.png" (loadeddata)="videoLoaded($event)">
+    <source src="assets/videos/bg.mp4" type="video/mp4">
+  </video>
 </div>
 <section>
   <div class="projects-container">
