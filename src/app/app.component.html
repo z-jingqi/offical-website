@@ -4,7 +4,9 @@
     <span class="logo-txt">Coeus</span>
   </div>
 </header>
-<div class="background"></div>
+<div class="background">
+  <video muted src="assets/videos/bg.mp4" loop="loop" autoplay="autoplay"></video>
+</div>
 <section>
   <div class="projects-container">
     <div class="project" *ngFor="let item of (projects$ | async)">
