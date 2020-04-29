@@ -8,14 +8,14 @@
     },
     {
         "name": "收银台windows版",
-        "descrption": "版本：2.8.13",
+        "descrption": "版本：3.1.0",
         "icon": "icon-windows",
         "type": "resource",
-        "url": "https://coeus.oss-cn-qingdao.aliyuncs.com/pos_release/COEUS-POS%20Setup%202.8.13.exe"
+        "url": "https://coeus.oss-cn-qingdao.aliyuncs.com/pos_release/COEUS-POS%20Setup%203.1.0.exe"
     },
     {
         "name": "收银台Mac版",
-        "descrption": "版本：3.0.7（beta）",
+        "descrption": "版本：3.0.7（测试版）",
         "icon": "icon-ios",
         "type": "resource",
         "url": "https://coeus.oss-cn-qingdao.aliyuncs.com/pos_mac_beta/COEUS-POS-3.0.7.dmg"

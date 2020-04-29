@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { DataService } from './services/data.service';
 import { Project } from './models';
 import { Observable } from 'rxjs';
@@ -11,6 +11,7 @@ import { Observable } from 'rxjs';
 export class AppComponent implements OnInit {
 
   projects$: Observable<Project[]>;
+  @ViewChild('videoRef') videoRef: ElementRef;
 
   constructor(
     private dataService: DataService
@@ -24,7 +25,4 @@ export class AppComponent implements OnInit {
     this.projects$ = this.dataService.getProjectData();
   }
 
-  videoLoaded(event: Event) {
-    (event.target as HTMLVideoElement).play();
-  }
 }
