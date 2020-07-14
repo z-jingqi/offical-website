@@ -1,0 +1,20 @@
+.contact {
+    color: #ffffff;
+}
+
+.contact-info {
+    display: flex;
+
+    .contact-item {
+        flex: 1;
+    }
+}
+
+.desc {
+    opacity: 0.75;
+}
+
+:host {
+    width: 50%;
+    margin: 0 auto;
+}

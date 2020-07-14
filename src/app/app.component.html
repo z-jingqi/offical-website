@@ -4,18 +4,35 @@
     <span class="logo-txt">Coeus</span>
   </div>
 </header>
-<div class="background">
-  <video #videoRef muted loop autoplay poster="assets/images/bg4.png" oncanplay="this.muted=true">
-    <source src="assets/videos/bg.mp4" type="video/mp4">
-  </video>
+<div class="menu-wrapper">
+  <coeus-menu [menus]="menus" [currentMenu]="currentHash" (menuSelect)="menuSelect($event)"></coeus-menu>
 </div>
-<section>
-  <div class="projects-container">
-    <div class="project" *ngFor="let item of (projects$ | async)">
-      <coeus-project-card [project]="item">
-      </coeus-project-card>
-    </div>
+<div class="nav-points-wrapper">
+  <ul>
+    <li *ngFor="let menu of menus">
+      <a href="#{{menu.id}}">
+        <span></span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="page-bg">
+  <div class="bg-cover-mask"></div>
+</div>
+<div class="scroll-container" [ngClass]="currentClass">
+  <div class="section">
+    <coeus-introduction></coeus-introduction>
   </div>
-</section>
-
-<a class="keep-on-record" href="http://www.beian.miit.gov.cn" target="_blank">蜀ICP备19022432号</a>
+  <div class="section">
+    <coeus-projects></coeus-projects>
+  </div>
+  <div class="section">
+    <coeus-contact></coeus-contact>
+  </div>
+  <div class="section">
+    <coeus-about></coeus-about>
+  </div>
+</div>
+<footer>
+  <a class="keep-on-record" href="http://www.beian.miit.gov.cn" target="_blank">蜀ICP备19022432号</a>
+</footer>
