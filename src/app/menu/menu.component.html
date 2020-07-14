@@ -1,8 +1,0 @@
-<ul id="scroll-menu" class="menu">
-    <li class="menu-item" [ngClass]="{'active': currentMenu == menu.id}" *ngFor="let menu of menus;let index = index">
-        <a class="menu-item-info" href="#{{menu.id}}" (click)="select(menu, index)">
-            <i class="iconfont" [ngClass]="menu.icon"></i>
-            <span class="name">{{menu.name}}</span>
-        </a>
-    </li>
-</ul>

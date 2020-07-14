@@ -5,12 +5,19 @@
   </div>
 </header>
 <div class="menu-wrapper">
-  <coeus-menu [menus]="menus" [currentMenu]="currentHash" (menuSelect)="menuSelect($event)"></coeus-menu>
+  <ul id="scroll-menu" class="menu">
+    <li class="menu-item" [ngClass]="{'active': currentHash == menu.id}" *ngFor="let menu of menus;let index = index">
+      <a class="menu-item-info" href="#{{menu.id}}" (click)="menuSelect(index)">
+        <i class="iconfont" [ngClass]="menu.icon"></i>
+        <span class="name">{{menu.name}}</span>
+      </a>
+    </li>
+  </ul>
 </div>
 <div class="nav-points-wrapper">
   <ul>
-    <li *ngFor="let menu of menus">
-      <a href="#{{menu.id}}">
+    <li *ngFor="let menu of menus;let index=index">
+      <a href="#{{menu.id}}" [ngClass]="{'active': menu.id == currentHash}" (click)="menuSelect(index)">
         <span></span>
       </a>
     </li>

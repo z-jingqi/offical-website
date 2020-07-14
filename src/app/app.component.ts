@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Menu } from './models';
-import { MENUS } from './menu/menu-data';
-import { fromEvent, Observable } from 'rxjs';
-import { debounceTime, throttleTime } from 'rxjs/operators'
+import { MENUS } from './menu-data';
+import { fromEvent } from 'rxjs';
+import { throttleTime } from 'rxjs/operators'
 
 @Component({
   selector: 'coeus-root',
@@ -33,13 +33,24 @@ export class AppComponent implements OnInit {
   menus: Menu[] = MENUS;
   sectionIndex = 0;
   currentHash = 'home';
-  menuIndex = {
-    home: 0,
-    projects: 1,
-    contact: 2,
-    about: 3
-  }
-
+  menuIndex = [
+    {
+      index: 0,
+      menu: 'home'
+    },
+    {
+      index: 1,
+      menu: 'projects'
+    },
+    {
+      index: 2,
+      menu: 'contact'
+    },
+    {
+      index: 3,
+      menu: 'about'
+    }
+  ];
   get currentClass() {
     return `index-${this.sectionIndex}`;
   }
@@ -50,8 +61,8 @@ export class AppComponent implements OnInit {
     this.onHashChange();
   }
 
-  menuSelect(params: { menu: Menu, index: number }) {
-    this.sectionIndex = params.index
+  menuSelect(index: number) {
+    this.sectionIndex = index
   }
 
   onScroll() {
@@ -66,6 +77,7 @@ export class AppComponent implements OnInit {
           this.sectionIndex++;
         }
       }
+      this.setHash(this.sectionIndex);
     });
   }
 
@@ -80,8 +92,15 @@ export class AppComponent implements OnInit {
   getInitHash() {
     this.currentHash = location.hash.replace('#', '');
     if (this.currentHash) {
-      const index = this.menuIndex[this.currentHash];
-      this.sectionIndex = index ? index : 0;
+      const menuI = this.menuIndex.find(mi => mi.menu == this.currentHash);
+      this.sectionIndex = menuI ? menuI.index : 0;
+    }
+  }
+
+  setHash(index: number) {
+    const menuI = this.menuIndex.find(mi => mi.index == index);
+    if (menuI) {
+      location.hash = `#${menuI.menu}`;
     }
   }
 
